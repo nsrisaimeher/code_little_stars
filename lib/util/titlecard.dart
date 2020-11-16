@@ -6,10 +6,12 @@ class TitleCard extends StatelessWidget {
     Key key,
     @required this.cardRadius,
     @required this.cardChild,
+    this.cardColor = primaryColor,
   }) : super(key: key);
 
   final Radius cardRadius;
   final Widget cardChild;
+  final Color cardColor;
 
   @override
   Widget build(BuildContext context) {

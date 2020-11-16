@@ -5,12 +5,16 @@ class OptionCard extends StatelessWidget {
   const OptionCard(
       {Key key,
       @required this.optionText,
+      this.optionTextSize = 21.0,
+      @required this.isCircleImage,
       @required this.widgetColor,
       @required this.imagePath})
       : super(key: key);
 
   final String optionText, imagePath;
   final Color widgetColor;
+  final bool isCircleImage;
+  final double optionTextSize; 
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +28,20 @@ class OptionCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              margin: EdgeInsets.all(5.0),
-              child: CircleAvatar(
-                radius: 45.0,
-                backgroundColor: Colors.white,
-                backgroundImage: AssetImage(imagePath,
+            Expanded(
+              flex: 2,
+              child: Container(
+                margin: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.0),
+                image:  
+                DecorationImage(
+                  image: AssetImage(imagePath),
+                  fit: BoxFit.cover,
+                  
+                )
                 ),
+                child: isCircleImage ? buildCircleAvatar() : null,
               ),
             ),
             // Divider(]
@@ -50,7 +61,7 @@ class OptionCard extends StatelessWidget {
                     optionText,
                     style: GoogleFonts.ramaraja(
                       color: Colors.white,
-                      fontSize: 21.0,
+                      fontSize: optionTextSize,
                       fontWeight: FontWeight.w100,
                       textStyle: Theme.of(context).textTheme.subtitle1,
                     ),
@@ -60,5 +71,15 @@ class OptionCard extends StatelessWidget {
             )
           ],
         ));
+  }
+
+  CircleAvatar buildCircleAvatar() {
+    return CircleAvatar(
+                radius: 45.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage(
+                  imagePath,
+                ),
+              );
   }
 }

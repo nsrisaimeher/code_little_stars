@@ -7,16 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 class Home extends StatelessWidget {
-  final Radius cardRadius = Radius.circular(50);
   int _colorIndex = 0;
-  List<Color> optionColors = [
-    primaryColor,
-    Colors.blue,
-    Colors.green,
-    Colors.brown,
-    Colors.orange,
-    Colors.red
-  ];
 
   int getNextColorIndex() {
     if (_colorIndex >= optionColors.length - 1) {
@@ -36,7 +27,7 @@ class Home extends StatelessWidget {
             cardRadius: cardRadius,
             cardChild: Center(
                 child: Text(
-              'బుల్లి తారలు',
+              'లిటిల్ సోల్జర్స్',
               style: buildTeluguFontStyle(context),
               
             )),
@@ -55,29 +46,59 @@ class Home extends StatelessWidget {
               mainAxisSpacing: 10,
               crossAxisCount: 2,
               children: <Widget>[
-                OptionCard(
-                  optionText: 'వర్ణమాల',
-                  widgetColor: optionColors[0], imagePath: 'assets/alphabet.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/varnamala');
+                  },
+                                  child: OptionCard(
+                    optionText: 'వర్ణమాల',
+                    widgetColor: optionColors[0], imagePath: 'assets/alphabet.png', isCircleImage: true,
+                  ),
                 ),
-                OptionCard(
-                  optionText: 'పక్షులు',
-                  widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/birds.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/birds');
+                  },  
+                                  child: OptionCard(
+                    optionText: 'పక్షులు',
+                    widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/birds.png', isCircleImage: true,
+                  ),
                 ),
-                OptionCard(
-                  optionText: 'జంతువులు',
-                  widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/animals.png',
+                GestureDetector(
+                  onTap: () {
+                      Navigator.pushNamed(context, '/animals');    
+                  },
+                                  child: OptionCard(
+                    optionText: 'జంతువులు',
+                    widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/animals.png', isCircleImage: true,
+                  ),
                 ),
-                OptionCard(
-                  optionText: 'ఫలాలు',
-                  widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/fruits.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/fruits');
+                  },
+                                  child: OptionCard(
+                    optionText: 'ఫలాలు',
+                    widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/fruits.png', isCircleImage: true,
+                  ),
                 ),
-                OptionCard(
-                  optionText: 'పుష్పాలు',
-                  widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/flowers.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/flowers');
+                  },
+                                  child: OptionCard(
+                    optionText: 'పుష్పాలు',
+                    widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/flowers.png', isCircleImage: true,
+                  ),
                 ),
-                OptionCard(
-                  optionText: 'కూరగాయలు',
-                  widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/veggies.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/veggies');
+                  },
+                                  child: OptionCard(
+                    optionText: 'కూరగాయలు',
+                    widgetColor: optionColors[getNextColorIndex()], imagePath: 'assets/veggies.png', isCircleImage: true,
+                  ),
                 ),
               ],
             )))
