@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.code_little_stars">
+    package="com.code_little_stars.telugukidsapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="Telugu Kids App"
         android:icon="@mipmap/ic_launcher">
