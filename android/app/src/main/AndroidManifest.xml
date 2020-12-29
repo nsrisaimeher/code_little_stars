@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.code_little_stars">
    <application
-        android:label="code_little_stars"
+        android:label="Telugu Kids App"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

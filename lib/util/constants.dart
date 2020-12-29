@@ -8,6 +8,11 @@ final Radius cardRadius = Radius.circular(50);
 TextStyle buildTeluguFontStyle(BuildContext context) => GoogleFonts.ramaraja(
     color: Colors.white, textStyle: Theme.of(context).textTheme.headline3);
 
+TextStyle buildHeadingFontStyle(BuildContext context) => GoogleFonts.ramaraja(
+    color: Colors.white, textStyle: Theme.of(context).textTheme.headline3);
+
+
+
   List<Color> optionColors = [
     Colors.black,
     Colors.blue,
@@ -313,7 +318,7 @@ TextStyle buildTeluguFontStyle(BuildContext context) => GoogleFonts.ramaraja(
       
     },
     {
-      'optionText': 'గుడ్లగుబ',
+      'optionText': 'గుడ్లగూబ',
       'optionImagePath': 'assets/birds/owl.jpg'
       
     },
@@ -519,7 +524,7 @@ TextStyle buildTeluguFontStyle(BuildContext context) => GoogleFonts.ramaraja(
       
     },
     {
-      'optionText': 'టమాటో',
+      'optionText': 'టమోటా',
       'optionImagePath': 'assets/veggies/tomatoes.jpg'
       
     },

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'constants.dart';
 
-
 class TitleAppCard extends StatelessWidget {
   const TitleAppCard({
     Key key,
@@ -38,10 +37,11 @@ class TitleAppCard extends StatelessWidget {
             ),
           ),
           Center(
-              child: Text(
-            appCardTitle,
-            style: buildTeluguFontStyle(context),
-          )),
+            child: Text(
+              appCardTitle,
+              style: buildTeluguFontStyle(context),
+            ),
+          ),
           Container(width: 32.0, height: 0.0),
         ],
       ),
