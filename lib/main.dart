@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'screens/home.dart';
 
-import 'package:splashscreen/splashscreen.dart';
 import 'util/constants.dart';
 
 
@@ -37,20 +36,7 @@ class AppMain extends StatelessWidget {
       theme: ThemeData(
         primaryColor: primaryColor,
       ),
-      home: SplashScreen(
-        seconds: 4,
-        navigateAfterSeconds: Home(),
-        title: Text(
-          'తెలుగు కిడ్స్ ఆప్',
-          style: buildHeadingFontStyle(context),
-        ),
-        image: Image.asset(
-          'assets/child.png',
-        ),
-        photoSize: 60.0,
-        loaderColor: Colors.white,
-        gradientBackground: RadialGradient(colors: [Colors.grey, primaryColor]),
-      ),
+      home: Home()
     );
   }
 }

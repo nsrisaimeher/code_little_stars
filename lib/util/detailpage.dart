@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage(
-      {Key key, @required this.detailPageTitle, @required this.optionList, this.optionCardColor = Colors.black})
+      {Key key,
+      @required this.detailPageTitle,
+      @required this.optionList,
+      this.optionCardColor = Colors.black})
       : super(key: key);
 
   final String detailPageTitle;
@@ -15,7 +18,7 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    precacheImage(AssetImage("assets/varnamala/amma.jpg"), context);
+    precacheImage(AssetImage("assets/varnamala/amma.webp"), context);
 
     return SafeArea(
       child: Scaffold(
@@ -23,7 +26,10 @@ class DetailPage extends StatelessWidget {
         body: Column(
           children: [
             Expanded(
-              child: TitleAppCard(appCardTitle: detailPageTitle, appCardColor: optionCardColor,),
+              child: TitleAppCard(
+                appCardTitle: detailPageTitle,
+                appCardColor: optionCardColor,
+              ),
             ),
             SizedBox(
               height: 12.0,
@@ -34,21 +40,23 @@ class DetailPage extends StatelessWidget {
                 options: CarouselOptions(
                   height: 300.0,
                   enlargeCenterPage: true,
+                  autoPlay: true,
                   viewportFraction: 0.75,
                 ),
                 items: optionList.map((optionMap) {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
-                          width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          child: OptionCard(
-                            optionText: optionMap['optionText'],
-                            optionTextSize: 35.0,
-                            widgetColor: optionCardColor,
-                            imagePath: optionMap['optionImagePath'],
-                            isCircleImage: false,
-                          ));
+                        width: MediaQuery.of(context).size.width,
+                        margin: EdgeInsets.symmetric(horizontal: 5.0),
+                        child: OptionCard(
+                          optionText: optionMap['optionText'],
+                          optionTextSize: 35.0,
+                          widgetColor: optionCardColor,
+                          imagePath: optionMap['optionImagePath'],
+                          isCircleImage: false,
+                        ),
+                      );
                     },
                   );
                 }).toList(),

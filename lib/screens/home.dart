@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                         child: OptionCard(
                           optionText: 'వర్ణమాల',
                           widgetColor: optionColors[0],
-                          imagePath: 'assets/alphabet.png',
+                          imagePath: 'assets/alphabet.webp',
                           isCircleImage: true,
                         ),
                       ),
@@ -67,7 +67,7 @@ class Home extends StatelessWidget {
                         child: OptionCard(
                           optionText: 'పక్షులు',
                           widgetColor: optionColors[getNextColorIndex()],
-                          imagePath: 'assets/birds.png',
+                          imagePath: 'assets/birds.webp',
                           isCircleImage: true,
                         ),
                       ),
@@ -78,7 +78,7 @@ class Home extends StatelessWidget {
                         child: OptionCard(
                           optionText: 'జంతువులు',
                           widgetColor: optionColors[getNextColorIndex()],
-                          imagePath: 'assets/animals.png',
+                          imagePath: 'assets/animals.webp',
                           isCircleImage: true,
                         ),
                       ),
@@ -89,7 +89,7 @@ class Home extends StatelessWidget {
                         child: OptionCard(
                           optionText: 'ఫలాలు',
                           widgetColor: optionColors[getNextColorIndex()],
-                          imagePath: 'assets/fruits.png',
+                          imagePath: 'assets/fruits.webp',
                           isCircleImage: true,
                         ),
                       ),
@@ -100,7 +100,7 @@ class Home extends StatelessWidget {
                         child: OptionCard(
                           optionText: 'పుష్పాలు',
                           widgetColor: optionColors[getNextColorIndex()],
-                          imagePath: 'assets/flowers.png',
+                          imagePath: 'assets/flowers.webp',
                           isCircleImage: true,
                         ),
                       ),
@@ -111,7 +111,7 @@ class Home extends StatelessWidget {
                         child: OptionCard(
                           optionText: 'కూరగాయలు',
                           widgetColor: optionColors[getNextColorIndex()],
-                          imagePath: 'assets/veggies.png',
+                          imagePath: 'assets/veggies.webp',
                           isCircleImage: true,
                         ),
                       ),
