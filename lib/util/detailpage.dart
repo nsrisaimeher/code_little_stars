@@ -40,7 +40,6 @@ class _DetailPageState extends State<DetailPage> {
         _tts.setSpeechRate(0.7);
         _tts.setVolume(1.0);
         _tts.setPitch(1.0);
-        print(_tts.getVoices.toString());
     
       }
 
