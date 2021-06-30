@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 const primaryColor = Color(0xFF804CEF);
 final Radius cardRadius = Radius.circular(50);
+const playStoreId = 'com.code_little_stars.telugukidsapp';
 
 TextStyle buildTeluguFontStyle(BuildContext context) => GoogleFonts.ramaraja(
     color: Colors.white, textStyle: Theme.of(context).textTheme.headline3);
